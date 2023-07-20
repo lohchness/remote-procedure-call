@@ -1,5 +1,11 @@
 # remote-procedure-call
 
+
+
+https://github.com/lohchness/remote-procedure-call/assets/50405970/0d9d0cf8-4287-4c1a-9319-55b6b6e5aebd
+
+
+
 # Overview and Architecture
 
 Remote Procedure Call (RPC) is a crucial technology in distributed computing that enables software applications to communicate with each other seamlessly over a network. It provides a way for a client to call a function on a remote server as if it were a local function call. This abstraction allows developers to build distributed systems and applications that span multiple machines and platforms.
@@ -58,6 +64,8 @@ This takes a pointer to an `rpc_data` object and returns a pointer to another `r
 To be usable on machines with different architectures, I had to convert 64-bit ints to network byte order and vice versa when sending and receiving data from one machine to another. This is because endian orders may be defined differently. The functions `uint64_t htonll(uint64_t value)` and `uint64_t ntohll(uint64_t value)` in `rpc.c` fixes this issue.
 
 I have also provided safety features and failure handling in case any data has been corrupted mid-transmission. In most cases, the host will send a failure bit to the other side and/or close the connection.
+
+There are also safeguards against request flooding, client/server disconnects, port conflicts, random data, binary characters, and switching threads.
 
 # Usage
 
