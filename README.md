@@ -1,9 +1,7 @@
 # remote-procedure-call
 
 
-
-https://github.com/lohchness/remote-procedure-call/assets/50405970/0d9d0cf8-4287-4c1a-9319-55b6b6e5aebd
-
+https://github.com/lohchness/remote-procedure-call/assets/50405970/0a9fbdd7-6933-4a6c-a1c6-4ad6ff6252d4
 
 
 # Overview and Architecture
